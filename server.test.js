@@ -1,7 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const env = require('dotenv').config();
-const api = process.env.NODE_ENV === 'production' ? request(process.env.APP_HOST) : request('http://localhost:3002')
+const api = process.env.NODE_ENV !== 'production' ? request(process.env.APP_HOST) : request('http://localhost:3002')
 const app = express();
 
 // endpoint
