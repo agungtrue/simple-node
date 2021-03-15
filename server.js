@@ -23,7 +23,7 @@ app.use('/ping', (req, res) => {
 })
 
 app.use('/', (req, res) => {
-    res.status(200).json({status: 'success', message: 'welcome!'})
+    res.status(200).json({status: 'success', message: 'welcome!!!'})
 })
 
 const port = 3002;
